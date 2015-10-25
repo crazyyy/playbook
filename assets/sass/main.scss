@@ -1,0 +1,223 @@
+@import 'import/reset';
+@import 'import/variables';
+@import 'import/buttons';
+@import 'import/forms';
+@import 'import/lists';
+@import 'import/tables';
+@import 'import/mixin.scss';
+@import 'import/wordpress.scss';
+@import 'sprite';
+@import 'font_fontawesome';
+@import 'font_opensans';
+@import 'font_roboto';
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: normal;
+  line-height: $base-line-height;
+
+  color: $base-font-color;
+  background-color: $base-background-color;
+
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+
+  margin: 0 0 $small-spacing;
+}
+p,
+pre {
+  margin: 0 0 $small-spacing;
+}
+a {
+  transition: $base-transition;
+  text-decoration: none;
+
+  color: $action-color;
+  &:active,
+  &:focus,
+  &:hover {
+    color: darken($action-color, 15%);
+  }
+  &:active,
+  &:focus {
+    color: lighten($action-color, 15%);
+    outline: none;
+  }
+}
+hr {
+  margin: $base-spacing 0;
+
+  border-top: none;
+  border-right: none;
+  border-bottom: $base-border;
+  border-left: none;
+}
+img,
+picture {
+  max-width: 100%;
+  margin: 0;
+}
+.wrapper {
+  position: relative;
+
+  width: 100%;
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+
+  @extend .clearfix;
+}
+.inner {
+  position: relative;
+
+  width: $width;
+  margin: 0 auto;
+
+  @extend .clearfix;
+}
+
+header {
+  display: none;
+
+  background-color: $light-gray;
+  .logo {
+    display: block;
+
+    width: $width / 10;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+nav {
+  ul {
+    @extend .justify-child;
+    @extend .clearfix;
+    li {
+      display: inline-block;
+    }
+  }
+  .headnav {
+    width: $width / 5;
+  }
+}
+
+section {
+  padding: 0 0 $footer;
+}
+article {
+  @extend .clearfix;
+}
+.looper {
+  @extend .clearfix;
+}
+
+
+
+
+.gor {
+  width: 100%;
+
+  @extend .clearfix;
+}
+
+.ver {
+  display: inline-block;
+  float: left;
+
+  width: 1.88%;
+  /* temp */
+  height: 18px;
+
+  border-right: 1px solid $base-border-color;
+  border-bottom: 1px solid $base-border-color;
+  background-color: $green;
+}
+
+.gor-1,
+.gor-2,
+.gor-3,
+.gor-4,
+.gor-5,
+.gor-6,
+.gor-7,
+.gor-8,
+.gor-9,
+.gor-10,
+.gor-110,
+.gor-111,
+.gor-112,
+.gor-113,
+.gor-114,
+.gor-115,
+.gor-116,
+.gor-117,
+.gor-118,
+.gor-119,
+.gor-120 {
+  .ver {
+    background-color: $blue;
+  }
+}
+
+.gor-10,
+.gor-109 {
+  .ver {
+    border-bottom: 4px solid $red;
+  }
+}
+
+.gor-11,
+.gor-110 {
+  .ver {
+    border-top: 4px solid $red;
+  }
+}
+
+
+.gor-20,
+.gor-99 {
+  .ver {
+    border-bottom: 2px solid $base-border-color;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  height: $footer;
+  margin: $footer_margin auto 0;
+
+  background-color: $light-gray;
+  .inner {
+    height: $footer;
+  }
+}
+
+@import 'import/print';
